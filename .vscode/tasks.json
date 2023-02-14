@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "buid project",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "compile",
+                "run"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                ".\\src\\main.cpp",
+                "-o",
+                "main"
+            ]
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": ".\\main"
+        }
+    ]
+}
